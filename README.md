@@ -13,7 +13,7 @@ NO_CAPTCHA_SITE_KEY=6LdPVSYTAAAAABNXVvFUS8QuvMICj0PR0VrU5U_m
 angular.module("myApp")
 .constant("noCaptchaSiteKey", "...");
 ```
-This is included in `client\index.html` so that noCaptchaSiteKey can be used in a contoller
+This is included in `client\index.html` so that noCaptchaSiteKey can be used in a contoller.
 
 
 ## How to run
@@ -22,7 +22,7 @@ After cloning the git, run:
 ```
 npm install
 ```
-in the root directory.  You need to make a file `.env` in the root directory that looks something like this:
+in the root directory.  You also need to make a file `.env` in the root directory that looks something like this:
 ```
 NO_CAPTCHA_SITE_KEY=AnythingYouWant
 ```
