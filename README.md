@@ -6,7 +6,7 @@ __Details__
 
 - The .env file goes in the root directory and looks like this:
 ```
-NO_CAPTCHA_SITE_KEY=6LdPVSYTAAAAABNXVvFUS8QuvMICj0PR0VrU5U_m
+NO_CAPTCHA_SITE_KEY=AnythingYouWant
 ```
 - The gulpfile.js reads this and makes `client\config.js` that looks like this:
 ```
