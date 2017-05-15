@@ -5,8 +5,8 @@
 
   app.controller('MainController', MainController); 
 
-  function MainController($scope, myNodeEnvVariable) {
-    $scope.myNodeEnvVariable = myNodeEnvVariable;
+  function MainController($scope, noCaptchaSiteKey) {
+    $scope.noCaptchaSiteKey = noCaptchaSiteKey;
   }
 
 })();

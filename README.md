@@ -1,13 +1,33 @@
-# Sample project illustrating how to inject env varialbes into AngularJs app
+# Use gulp to inject .env variables into client
 
-This app demonstrate a better way of injecting enviromental apps into angular using _gulp_ tasks.
+This is going to get environment variables from .env and pass them along to an Angular client.
+
+__Details__
+
+- The .env file goes in the root directory and looks like this:
+```
+NO_CAPTCHA_SITE_KEY=6LdPVSYTAAAAABNXVvFUS8QuvMICj0PR0VrU5U_m
+```
+- The gulpfile.js reads this and makes `client\config.js` that looks like this:
+```
+angular.module("myApp")
+.constant("noCaptchaSiteKey", "...");
+```
+This is included in `client\index.html` so that noCaptchaSiteKey can be used in a contoller
+
 
 ## How to run
 
-Simply run `node index` to run node server. This will also generate angular configuration file and place it in client folder. 
-Configuration file is angular constant service with key value pairs for certain node env variables.
-Process of injecting these values is done by gulp command: `config`. 
-
-## gulp config
-
-`gulp config` takes _config.json_ as default config and generates angular constant service. It will inject all the configs from _config.json_. If you want to override some of the value from the config or add new ones, add them to enviromental variables and `constants` in `configureSetup` (gulpfile.js).
+After cloning the git, run:
+```
+npm install
+```
+in the root directory.  You need to make a file `.env` in the root directory that looks something like this:
+```
+NO_CAPTCHA_SITE_KEY=AnythingYouWant
+```
+ Next, from the root directory, run the app:
+```
+node index.js
+```
+Afterwards, you should find that `client\config.js` has been created.  You can see the client key by going to `http://localhost:3000/` in your browser.

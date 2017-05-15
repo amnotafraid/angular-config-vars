@@ -1,17 +1,29 @@
 'use strict';
 
-var express = require('express');
+var express       = require('express');
+var path          = require('path');
+
+var gulp          = require('gulp'); // Load gulp
+var dotenv        = require('dotenv');
+
+dotenv.config();
+
+/* The gulpfile is going to read the dotenv file and
+ * make dist/scripts/env/config.js which looks like this:
+ *
+ * angular.module('clientApp.config', [])
+ *  .constant('jChartFxLicense', '...')
+ *  .constant('noCaptchaSiteKey', '...');
+ */
+
+
+require('./gulpfile'); // Loads our config task
+gulp.start('config');
+
 var app = express();
 
-var gulp = require('gulp'); // Load gulp
-require('./gulpfile'); // Loads our config task
-
-
-// Kick of gulp 'config' task, which generates angular const configuration
-gulp.start('config'); 
-
 // serve client side files
-app.use(express.static('client'));
+app.use(express.static(path.join(__dirname, '/client')));
 
 app.listen(3000);
 

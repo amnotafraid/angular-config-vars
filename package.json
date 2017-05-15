@@ -1,12 +1,15 @@
 {
   "name": "angular-config-vars",
   "version": "1.0.0",
-  "description": "Example of how to correctly inject configuration into angular",
+  "description": ".env variables to angular constants",
   "main": "index.js",
   "dependencies": {
     "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "gulp-ng-config": "^1.2.1"
+    "gulp-dotenv": "^0.2.1",
+    "gulp-ng-config": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "map-stream": "0.0.7"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kudresov/angular-config-vars.git"
+    "url": "git+https://github.com/amnotafraid/angular-config-vars.git"
   },
   "keywords": [
     "angularjs"
   ],
-  "author": "Vitalij Kudresov <kudresov@gmail.com> (http://kudresov.com)",
+  "author": "Bessie Malek <amnotafraid@gmail.com> (https://andnotafraid.github.io/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kudresov/angular-config-vars/issues"
+    "url": "https://github.com/amnotafraid/angular-config-vars/issues"
   },
-  "homepage": "https://github.com/kudresov/angular-config-vars#readme"
+  "homepage": "https://github.com/amnotafraid/angular-config-vars#readme"
 }
